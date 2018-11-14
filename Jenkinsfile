@@ -8,6 +8,7 @@ pipeline {
         stage('checkout repo') {
             steps {
               checkout scm
+              sh 'git fetch origin master'
             }
         }
         
