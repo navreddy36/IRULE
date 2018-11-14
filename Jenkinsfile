@@ -21,7 +21,7 @@ pipeline {
                 sh  'cd /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/; /usr/local/bin/terraform plan'
             }
         }
-        stage('F5-Terraform-apply') {
+        stage('F5-Node-VM-Pool-Creation') {
             steps {
                 sh  'cd /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/; /usr/local/bin/terraform apply -input=false -auto-approve'
                    
