@@ -9,9 +9,9 @@ when HTTP_REQUEST priority 100 {
     set ATTEMPTING_TO_LOGIN 0
   }
 }
-when HTTP_REQUEST priority 200 timing on {
-  log local0. "Request Event 2 - login state: '$ATTEMPTING_TO_LOGIN'"
-}
-when HTTP_REQUEST timing on {
-  unset ATTEMPTING_TO_LOGIN
-}
+#when HTTP_REQUEST priority 200 timing on {
+#  log local0. "Request Event 2 - login state: '$ATTEMPTING_TO_LOGIN'"
+#}
+#when HTTP_REQUEST timing on {
+#  unset ATTEMPTING_TO_LOGIN
+#}
