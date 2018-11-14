@@ -5,24 +5,23 @@ pipeline {
         }
     }
     stages {
-        stage('checkout repo') {
+        stage('iRule checkout') {
             steps {
               checkout scm
-              sh 'git pull origin master'
             }
         }
         
-        stage('init') {
+        stage('F5-Terraform-init') {
             steps {
                 sh  'cd /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/; /usr/local/bin/terraform init'
             }
         }
-        stage('plan') {
+        stage('F5-Terraform-plan') {
             steps {
                 sh  'cd /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/; /usr/local/bin/terraform plan'
             }
         }
-        stage('apply') {
+        stage('F5-Terraform-apply') {
             steps {
                 sh  'cd /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/; /usr/local/bin/terraform apply -input=false -auto-approve'
                    
