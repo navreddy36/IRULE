@@ -19,7 +19,7 @@ pipeline {
             }
         }
         stage('plan') {
-            steps {{
+            steps {
                 sh  """
                     /usr/local/bin/terraform plan /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/demo.tf -out=tfplan -input=false 
                     """
