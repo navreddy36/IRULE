@@ -13,7 +13,6 @@ pipeline {
         
         stage('init') {
             steps {
-                s
                 sh  'cd /Users/naveen/go/src/github.com/f5devcentral/terraform-provider-bigip/; /usr/local/bin/terraform init'
             }
         }
